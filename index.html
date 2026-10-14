@@ -715,6 +715,24 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
 #in-cjm li{transition:background-color .25s ease,color .25s ease,transform .16s var(--ease-out)}
 #in-cjm li:active{transform:scale(.98)}
 @media (hover:hover){#in-cjm li:not(.on):hover{background:#F6F7F9}}
+
+/* team */
+.team{padding:clamp(56px,8vw,100px) 0 0}
+.tms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tm{border-radius:28px;background:#fff;box-shadow:var(--shadow);padding:clamp(22px,2.6vw,32px);display:flex;flex-direction:column}
+.tm-h{display:flex;align-items:center;gap:10px;font-size:1.35rem;font-weight:800;letter-spacing:-.02em}
+.tm ul{list-style:none;margin:18px 0 0;padding:0}
+.tm li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.tm li .av{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#FFE9E7;color:var(--alfa);font-weight:800;font-size:.95rem}
+.tm li b{display:block;font-weight:800;color:var(--ink);font-size:1rem}
+.tm li span{color:var(--ink-2);font-size:.93rem;line-height:1.35}
+.tm-g{margin-top:auto;padding:16px 18px;border-radius:18px;background:var(--alfa);color:#fff}
+.tm ul+.tm-g{margin-top:16px}
+.tm-g small{display:block;font-size:.78rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;opacity:.8;margin-bottom:6px}
+.tm-g p{font-size:.98rem;line-height:1.4;font-weight:600}
+.tm-g p+p{margin-top:6px}
+@media (max-width:1000px){.tms{grid-template-columns:minmax(0,1fr)}}
+.tms{align-items:stretch}.tm ul{flex:1}
 </style>
 </head>
 <body>
@@ -727,6 +745,7 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
       <span class="x">×</span><i class="circles" aria-hidden="true"></i><i class="word" aria-hidden="true"></i>
     </a>
     <ul>
+      <li><a href="#team">Участники</a></li>
       <li><a href="#summary">Коротко</a></li>
       <li><a href="#c1">Рассрочка</a></li>
       <li><a href="#c2">Лояльность</a></li>
@@ -756,6 +775,25 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
 
 <a class="toc-fab" href="#summary" aria-label="К оглавлению"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"/></svg><span>Оглавление</span></a>
 <main>
+<section id="team" class="team" aria-labelledby="tm-h">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 id="tm-h">Сегодня с нами на воркшопе от Альфа-Банка будут</h2>
+    </div>
+    <div class="tms">
+      <article class="tm" data-reveal style="--i:0"><b class="tm-h"><i class="dot d-r"></i>Стратегические партнёры</b>
+        <ul><li><span class="av">АК</span><span><b>Козырев Александр</b>руководитель дирекции</span></li><li><span class="av">СХ</span><span><b>Хасанов Султан</b>руководитель направления развития партнёрских проектов</span></li></ul>
+        <div class="tm-g"><small>Цели и задачи со стороны АБ</small><p>Прирост новых клиентов в сегменте ММБ в РКО и кредитовании</p></div></article>
+      <article class="tm" data-reveal style="--i:1"><b class="tm-h"><i class="dot d-g"></i>Лояльность</b>
+        <ul><li><span class="av">АМ</span><span><b>Монеткин Артём</b>руководитель дирекции</span></li><li><span class="av">ДР</span><span><b>Русаковский Дмитрий</b>начальник управления</span></li><li><span class="av">АГ</span><span><b>Гостилович Александр</b>руководитель направления привлечения партнёрских решений</span></li></ul>
+        <div class="tm-g"><small>Цели и задачи со стороны АБ</small><p>Привлечение новых клиентов и развитие партнёрских решений в направлении лояльности</p></div></article>
+      <article class="tm" data-reveal style="--i:2"><b class="tm-h"><i class="dot d-v"></i>Маркетинг</b>
+        <ul><li><span class="av">МС</span><span><b>Сучкова Майя</b>начальник отдела партнёрского маркетинга</span></li><li><span class="av">ОБ</span><span><b>Бандол Олеся</b>главный эксперт</span></li></ul>
+        <div class="tm-g"><small>Цели и задачи со стороны АБ</small><p>Запуск совместных РК с партнёрами и специальные проекты</p><p>Прирост новых клиентов в сегменте ММБ в РКО и кредитовании</p></div></article>
+    </div>
+  </div>
+</section>
+
 <section id="summary" class="summary" aria-labelledby="sm-h">
   <div class="wrap sm-grid">
     <div data-reveal>
