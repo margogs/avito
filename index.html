@@ -733,6 +733,18 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
 .tm-g p+p{margin-top:6px}
 @media (max-width:1000px){.tms{grid-template-columns:minmax(0,1fr)}}
 .tms{align-items:stretch}.tm ul{flex:1}
+
+/* Alfa site inside the browser frame */
+.app.alfa-site{grid-template-columns:1fr}.app.alfa-site .side{display:none}
+.alfa-hd{display:flex;align-items:center;gap:8px;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid var(--line);font-size:12px;color:var(--ink-3)}
+.alfa-hd .a{display:grid;place-items:center;width:24px;height:24px;border-radius:7px;background:var(--alfa);color:#fff;font-weight:800;font-size:13px}
+.alfa-hd b{color:var(--ink);font-size:13.5px;margin-right:6px}
+.sched-d{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.sched-d div{padding:10px 12px;border-radius:12px;background:#F6F7F9}
+.sched-d small{display:block;font-size:11px;color:var(--ink-3);font-weight:600}
+.sched-d b{display:block;font-size:15px;font-weight:800}
+.sched-d span{font-size:11.5px;color:var(--ink-3)}
+.compact .sched-d{grid-template-columns:1fr 1fr}
 </style>
 </head>
 <body>
@@ -786,7 +798,7 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
         <div class="tm-g"><small>Цели и задачи со стороны АБ</small><p>Прирост новых клиентов в сегменте ММБ в РКО и кредитовании</p></div></article>
       <article class="tm" data-reveal style="--i:1"><b class="tm-h"><i class="dot d-g"></i>Лояльность</b>
         <ul><li><span class="av">АМ</span><span><b>Монеткин Артём</b>руководитель дирекции</span></li><li><span class="av">ДР</span><span><b>Русаковский Дмитрий</b>начальник управления</span></li><li><span class="av">АГ</span><span><b>Гостилович Александр</b>руководитель направления привлечения партнёрских решений</span></li></ul>
-        <div class="tm-g"><small>Цели и задачи со стороны АБ</small><p>Привлечение новых клиентов и развитие партнёрских решений в направлении лояльности</p></div></article>
+        <div class="tm-g"><small>Цели и задачи со стороны АБ</small><p>Увеличение LTV текущих клиентов и развитие партнёрских решений в направлении лояльности</p></div></article>
       <article class="tm" data-reveal style="--i:2"><b class="tm-h"><i class="dot d-v"></i>Маркетинг</b>
         <ul><li><span class="av">МС</span><span><b>Сучкова Майя</b>начальник отдела партнёрского маркетинга</span></li><li><span class="av">ОБ</span><span><b>Бандол Олеся</b>главный эксперт</span></li></ul>
         <div class="tm-g"><small>Цели и задачи со стороны АБ</small><p>Запуск совместных РК с партнёрами и специальные проекты</p><p>Прирост новых клиентов в сегменте ММБ в РКО и кредитовании</p></div></article>
@@ -850,7 +862,7 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
     <div>
       <span class="ey">Инициатива · B2B рассрочка Авито Про и Авито Реклама</span>
       <h2 id="c1-h">Оплати, не откладывая на завтра</h2>
-      <p class="lead">Встраиваем B2B рассрочку Альфа-Банка в оплату Авито Реклама и Авито Про кнопкой «Купить в рассрочку». Бизнес запускает продвижение сегодня, а платит частями.</p>
+      <p class="lead">Встраиваем B2B рассрочку Альфа-Банка в оплату Авито Реклама и Авито Про кнопкой «Купить в рассрочку». Бизнес запускает продвижение сегодня, а платит 4 равными платежами раз в месяц.</p>
     </div>
   </div>
 </section>
@@ -860,14 +872,13 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
     <div class="sec-head" data-reveal>
       <span class="sec-ey"><i class="dot d-r"></i>CJM клиента</span>
       <h2 id="in-h">Оплата услуг в кабинете Авито сервисом B2B рассрочки</h2>
-      <p class="lead">Пройдите путь сами: пополните баланс Авито Реклама в рассрочку. Подсвечен шаг, на котором вы находитесь.</p>
+      <p class="lead">Пройдите путь сами: оплатите счёт Авито Реклама бизнес-рассрочкой Альфа-Банка. Для клиентов со счётом в банке это 4 шага и не более 5 минут.</p>
     </div>
     <ol class="cjm red" id="in-cjm" data-reveal>
-      <li data-s="0"><small>ШАГ 1</small><b>Финансы</b><br>баланс 0 ₽, баннер Альфы</li>
-      <li data-s="1"><small>ШАГ 2</small><b>Пополнить баланс</b><br>сумма и способ</li>
-      <li data-s="2"><small>ШАГ 3</small><b>Купить в рассрочку</b><br>срок и платёж</li>
-      <li data-s="3"><small>ШАГ 4</small><b>Решение банка</b><br>по ИНН, за минуту</li>
-      <li data-s="4"><small>ШАГ 5</small><b>Баланс пополнен</b><br>продвижение работает</li>
+      <li data-s="0"><small>ШАГ 1</small><b>Купить в рассрочку</b><br>счёт в финансах Авито Реклама</li>
+      <li data-s="1"><small>ШАГ 2</small><b>Вход в Альфа-Банк</b><br>Alfa ID и согласие по СМС</li>
+      <li data-s="2"><small>ШАГ 3</small><b>Условия</b><br>4 платежа раз в месяц, счёт погашения</li>
+      <li data-s="3"><small>ШАГ 4</small><b>Подписание договора</b><br>деньги сразу уходят в Авито</li>
     </ol>
     <div class="split" style="margin-top:28px">
       <div data-reveal>
@@ -883,7 +894,7 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
       </div>
     </div>
     <div class="pills" data-reveal>
-      <span><i class="dot d-r"></i>Кнопка «Купить в рассрочку» рядом с пополнением</span>
+      <span><i class="dot d-r"></i>Кнопка «Купить в рассрочку» в финансах кабинета</span>
       <span><i class="dot d-b"></i>Баннер Авито × Альфа-Банк в кабинете</span>
       <span><i class="dot d-g"></i>Флажок «в рассрочку с Альфа-Банком» под ценой</span>
     </div>
@@ -1113,42 +1124,7 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
   </div>
 </section>
 
-<section id="cert" aria-labelledby="ce-h">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <span class="sec-ey"><i class="dot d-r"></i>Что внутри</span>
-      <h2 id="ce-h">Сертификат A² это</h2>
-    </div>
-    <div class="inc">
-      <div data-reveal><em>1</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M236,96a12,12,0,0,0-.44-3.3L221.2,42.51A20.08,20.08,0,0,0,202,28H54A20.08,20.08,0,0,0,34.8,42.51L20.46,92.7A12,12,0,0,0,20,96h0v16a43.94,43.94,0,0,0,16,33.92V216a12,12,0,0,0,12,12H208a12,12,0,0,0,12-12V145.92A43.94,43.94,0,0,0,236,112V96ZM57.05,52H199l9.14,32H47.91Zm91,56v4a20,20,0,0,1-40,0v-4ZM53,128.71A20,20,0,0,1,44,112v-4H84v4a20,20,0,0,1-20,20,19.76,19.76,0,0,1-9.07-2.2A11.54,11.54,0,0,0,53,128.71ZM196,204H60V155.81c1.32.12,2.65.19,4,.19a43.86,43.86,0,0,0,32-13.85,43.89,43.89,0,0,0,64,0A43.86,43.86,0,0,0,192,156c1.35,0,2.68-.07,4-.19Zm16-92a20,20,0,0,1-9,16.71,11.66,11.66,0,0,0-1.88,1.09A20,20,0,0,1,172,112v-4h40Z"/></svg></i><b>Автоматическая настройка магазина</b><span>Аватар, описание и SEO-заголовки</span></div>
-      <div data-reveal class="hl" style="--i:1"><em>2</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M188,86.11V84c0-14.62-10.83-27.55-30.51-36.4C140.87,40.12,119,36,96,36S51.13,40.12,34.51,47.6C14.83,56.45,4,69.38,4,84v40c0,14.62,10.83,27.55,30.51,36.4A131.67,131.67,0,0,0,68,169.88V172c0,14.62,10.83,27.55,30.51,36.4C115.13,215.88,137,220,160,220s44.87-4.12,61.49-11.6C241.17,199.55,252,186.62,252,172V132C252,109.86,226.71,92.08,188,86.11ZM228,132c0,7.75-21.77,22.48-61.81,23.88C180.33,147.4,188,136.3,188,124V110.44C213.88,115.15,228,125.48,228,132ZM107.37,147.63c-3.63.24-7.42.37-11.37.37-5.08,0-9.89-.22-14.43-.61a10.94,10.94,0,0,0-1.14-.09c-1.51-.14-3-.3-4.43-.48V130.93A187,187,0,0,0,96,132a187,187,0,0,0,20-1.07v15.89c-2.49.3-5.07.56-7.75.75C108,147.58,107.66,147.6,107.37,147.63ZM164,117.14V124c0,4.78-8.28,12.21-24,17.54v-15a115.32,115.32,0,0,0,17.49-6.13Q160.93,118.86,164,117.14ZM96,60c44,0,68,15.85,68,24s-24,24-68,24S28,92.15,28,84,52,60,96,60ZM28,124v-6.86q3.08,1.71,6.51,3.26A115.32,115.32,0,0,0,52,126.53v15C36.28,136.21,28,128.78,28,124Zm64,48v0c1.33,0,2.66,0,4,0q5.44,0,10.77-.32,4.45,1.57,9.23,2.86v15C100.28,184.21,92,176.78,92,172Zm48,22.82V178.94A186.45,186.45,0,0,0,160,180a187,187,0,0,0,20-1.07v15.89a170.08,170.08,0,0,1-40,0Zm64-5.28v-15a115.32,115.32,0,0,0,17.49-6.13q3.44-1.54,6.51-3.26V172C228,176.78,219.72,184.21,204,189.54Z"/></svg></i><b>10 000 баллов на продвижение</b><span>Автоматическое пополнение, сразу отражается в кошельке Авито</span></div>
-      <div data-reveal style="--i:2"><em>3</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232.76,137.88A28.39,28.39,0,0,0,208.13,133L172,141.26c0-.42,0-.84,0-1.26a32,32,0,0,0-32-32H89.94a35.76,35.76,0,0,0-25.45,10.54L43,140H20A20,20,0,0,0,0,160v40a20,20,0,0,0,20,20H120a11.89,11.89,0,0,0,2.91-.36l64-16a11.4,11.4,0,0,0,1.79-.6l38.82-16.54c.23-.09.45-.19.67-.3a28.61,28.61,0,0,0,4.57-48.32ZM36,196H24V164H36Zm181.68-31.39-37.51,16L118.52,196H60V157l21.46-21.46A11.93,11.93,0,0,1,89.94,132H140a8,8,0,0,1,0,16H112a12,12,0,0,0,0,24h32a12.19,12.19,0,0,0,2.69-.3l67-15.41.47-.12a4.61,4.61,0,0,1,5.82,4.44A4.58,4.58,0,0,1,217.68,164.61ZM164,100a40.36,40.36,0,0,0,5.18-.34,40,40,0,1,0,29.67-59.32A40,40,0,1,0,164,100Zm40-36a16,16,0,1,1-16,16A16,16,0,0,1,204,64ZM164,44a16,16,0,0,1,12.94,6.58A39.9,39.9,0,0,0,164.2,76H164a16,16,0,0,1,0-32Z"/></svg></i><b>Доступ к кредитованию</b><span>Оборотные средства и рассрочка для бизнеса</span></div>
-      <div data-reveal style="--i:3"><em>4</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216.49,184.49l-32,32a12,12,0,0,1-17-17L179,188H48a12,12,0,0,1,0-24H179l-11.52-11.51a12,12,0,0,1,17-17l32,32A12,12,0,0,1,216.49,184.49Zm-145-64a12,12,0,0,0,17-17L77,92H208a12,12,0,0,0,0-24H77L88.49,56.49a12,12,0,0,0-17-17l-32,32a12,12,0,0,0,0,17Z"/></svg></i><b>Система лояльности</b><span>Выгодная конвертация баллов Альфа-Банка в баллы Авито</span></div>
-      <div data-reveal style="--i:4"><em>5</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M100,100a12,12,0,0,1,12-12h32a12,12,0,0,1,0,24H112A12,12,0,0,1,100,100ZM236,68V196a20,20,0,0,1-20,20H40a20,20,0,0,1-20-20V68A20,20,0,0,1,40,48H76V40a28,28,0,0,1,28-28h48a28,28,0,0,1,28,28v8h36A20,20,0,0,1,236,68ZM100,48h56V40a4,4,0,0,0-4-4H104a4,4,0,0,0-4,4ZM44,72v35.23A180.06,180.06,0,0,0,128,128a180,180,0,0,0,84-20.78V72ZM212,192V133.94A204.27,204.27,0,0,1,128,152a204.21,204.21,0,0,1-84-18.06V192Z"/></svg></i><b>Нефинансовые сервисы Альфа-Банка</b><span>Полный доступ ко всем сервисам для бизнеса</span></div>
-      <div data-reveal style="--i:5"><em>6</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.17,57.9,198.09,29.65h0A11.9,11.9,0,0,0,192,28H160a12,12,0,0,0-12,12,20,20,0,0,1-40,0A12,12,0,0,0,96,28H64a11.9,11.9,0,0,0-6.07,1.66h0L9.83,57.9A20.18,20.18,0,0,0,2,84l17.9,36.8A19.62,19.62,0,0,0,37.67,132H52v76a20,20,0,0,0,20,20H184a20,20,0,0,0,20-20V132h14.32a19.64,19.64,0,0,0,17.75-11.17L254,84A20.18,20.18,0,0,0,246.17,57.9ZM40.37,108,25.16,76.73,52,61v47ZM180,204H76V52h9.67a44,44,0,0,0,84.68,0H180Zm35.62-96H204V61l26.83,15.76Z"/></svg></i><b>Мерч A²</b><span>При накоплении 30 000 баллов в xWallet</span></div>
-    </div>
-
-    <div style="margin-top:clamp(48px,6vw,80px)">
-      <span class="sec-ey" data-reveal><i class="dot d-b"></i>Клиентский путь</span>
-      <ol class="cjm" data-reveal>
-        <li><small>ШАГ 1</small><b>Открывает РКО</b><br>в Альфа-Банке из кабинета Авито</li>
-        <li><small>ШАГ 2</small><b>Получает сертификат A²</b><br>в личном кабинете</li>
-        <li><small>ШАГ 3</small><b>Активирует</b><br>в кабинете Авито</li>
-        <li class="on"><small>ШАГ 4</small><b>Пользуется сервисами</b><br>через бизнес-кошелёк Авито</li>
-      </ol>
-      <p class="hint-tap" data-reveal><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.26,90.4a108,108,0,0,1-177.63,114A108,108,0,0,1,195.41,43.63l20.1-20.11a12,12,0,0,1,17,17l-96,96a12,12,0,1,1-17-17l24-24a36,36,0,1,0,19.76,39.65,12,12,0,0,1,23.53,4.74,60,60,0,1,1-25.73-62L178.3,60.74a84,84,0,1,0,28.46,38,12,12,0,1,1,22.5-8.35Z"/></svg>KPI: открытые РКО и конверсия в первую активную сделку на Авито</p>
-    </div>
-
-    <div class="why">
-      <div data-reveal><b>Клиент видит «упакованный бизнес»</b><span>а не просто 10 000 на счету</span></div>
-      <div data-reveal style="--i:1"><b>Бесшовная интеграция оффера</b><span>Встраиваем нефинансовые решения в клиентский путь</span></div>
-      <div data-reveal style="--i:2" class="dk"><b>Цель в KPI</b><big class="num">10 тыс.</big><span>РКО в 2027 г.</span></div>
-      <div data-reveal style="--i:3" class="dk"><b>Бюджет на проект</b><big class="num">150 млн ₽</big><span>на реализацию проекта</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="where" aria-labelledby="wh-h" style="padding-top:0">
+<section id="where" aria-labelledby="wh-h">
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="sec-ey"><i class="dot d-r"></i>Куда мы встаём</span>
@@ -1181,6 +1157,41 @@ footer{padding:32px 0 48px;color:var(--ink-3);font-size:.84rem}
         <h3>Баннер в карточке айтема</h3>
         <p>Под ценой кнопка «От 625 ₽ × 4 платежа в рассрочку с Альфа-Банком».</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="cert" aria-labelledby="ce-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="sec-ey"><i class="dot d-r"></i>Что внутри</span>
+      <h2 id="ce-h">Сертификат A² это</h2>
+    </div>
+    <div class="inc">
+      <div data-reveal><em>1</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M236,96a12,12,0,0,0-.44-3.3L221.2,42.51A20.08,20.08,0,0,0,202,28H54A20.08,20.08,0,0,0,34.8,42.51L20.46,92.7A12,12,0,0,0,20,96h0v16a43.94,43.94,0,0,0,16,33.92V216a12,12,0,0,0,12,12H208a12,12,0,0,0,12-12V145.92A43.94,43.94,0,0,0,236,112V96ZM57.05,52H199l9.14,32H47.91Zm91,56v4a20,20,0,0,1-40,0v-4ZM53,128.71A20,20,0,0,1,44,112v-4H84v4a20,20,0,0,1-20,20,19.76,19.76,0,0,1-9.07-2.2A11.54,11.54,0,0,0,53,128.71ZM196,204H60V155.81c1.32.12,2.65.19,4,.19a43.86,43.86,0,0,0,32-13.85,43.89,43.89,0,0,0,64,0A43.86,43.86,0,0,0,192,156c1.35,0,2.68-.07,4-.19Zm16-92a20,20,0,0,1-9,16.71,11.66,11.66,0,0,0-1.88,1.09A20,20,0,0,1,172,112v-4h40Z"/></svg></i><b>Автоматическая настройка магазина</b><span>Аватар, описание и SEO-заголовки</span></div>
+      <div data-reveal class="hl" style="--i:1"><em>2</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M188,86.11V84c0-14.62-10.83-27.55-30.51-36.4C140.87,40.12,119,36,96,36S51.13,40.12,34.51,47.6C14.83,56.45,4,69.38,4,84v40c0,14.62,10.83,27.55,30.51,36.4A131.67,131.67,0,0,0,68,169.88V172c0,14.62,10.83,27.55,30.51,36.4C115.13,215.88,137,220,160,220s44.87-4.12,61.49-11.6C241.17,199.55,252,186.62,252,172V132C252,109.86,226.71,92.08,188,86.11ZM228,132c0,7.75-21.77,22.48-61.81,23.88C180.33,147.4,188,136.3,188,124V110.44C213.88,115.15,228,125.48,228,132ZM107.37,147.63c-3.63.24-7.42.37-11.37.37-5.08,0-9.89-.22-14.43-.61a10.94,10.94,0,0,0-1.14-.09c-1.51-.14-3-.3-4.43-.48V130.93A187,187,0,0,0,96,132a187,187,0,0,0,20-1.07v15.89c-2.49.3-5.07.56-7.75.75C108,147.58,107.66,147.6,107.37,147.63ZM164,117.14V124c0,4.78-8.28,12.21-24,17.54v-15a115.32,115.32,0,0,0,17.49-6.13Q160.93,118.86,164,117.14ZM96,60c44,0,68,15.85,68,24s-24,24-68,24S28,92.15,28,84,52,60,96,60ZM28,124v-6.86q3.08,1.71,6.51,3.26A115.32,115.32,0,0,0,52,126.53v15C36.28,136.21,28,128.78,28,124Zm64,48v0c1.33,0,2.66,0,4,0q5.44,0,10.77-.32,4.45,1.57,9.23,2.86v15C100.28,184.21,92,176.78,92,172Zm48,22.82V178.94A186.45,186.45,0,0,0,160,180a187,187,0,0,0,20-1.07v15.89a170.08,170.08,0,0,1-40,0Zm64-5.28v-15a115.32,115.32,0,0,0,17.49-6.13q3.44-1.54,6.51-3.26V172C228,176.78,219.72,184.21,204,189.54Z"/></svg></i><b>10 000 баллов на продвижение</b><span>Автоматическое пополнение, сразу отражается в кошельке Авито</span></div>
+      <div data-reveal style="--i:2"><em>3</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232.76,137.88A28.39,28.39,0,0,0,208.13,133L172,141.26c0-.42,0-.84,0-1.26a32,32,0,0,0-32-32H89.94a35.76,35.76,0,0,0-25.45,10.54L43,140H20A20,20,0,0,0,0,160v40a20,20,0,0,0,20,20H120a11.89,11.89,0,0,0,2.91-.36l64-16a11.4,11.4,0,0,0,1.79-.6l38.82-16.54c.23-.09.45-.19.67-.3a28.61,28.61,0,0,0,4.57-48.32ZM36,196H24V164H36Zm181.68-31.39-37.51,16L118.52,196H60V157l21.46-21.46A11.93,11.93,0,0,1,89.94,132H140a8,8,0,0,1,0,16H112a12,12,0,0,0,0,24h32a12.19,12.19,0,0,0,2.69-.3l67-15.41.47-.12a4.61,4.61,0,0,1,5.82,4.44A4.58,4.58,0,0,1,217.68,164.61ZM164,100a40.36,40.36,0,0,0,5.18-.34,40,40,0,1,0,29.67-59.32A40,40,0,1,0,164,100Zm40-36a16,16,0,1,1-16,16A16,16,0,0,1,204,64ZM164,44a16,16,0,0,1,12.94,6.58A39.9,39.9,0,0,0,164.2,76H164a16,16,0,0,1,0-32Z"/></svg></i><b>Доступ к кредитованию</b><span>Оборотные средства и рассрочка для бизнеса</span></div>
+      <div data-reveal style="--i:3"><em>4</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216.49,184.49l-32,32a12,12,0,0,1-17-17L179,188H48a12,12,0,0,1,0-24H179l-11.52-11.51a12,12,0,0,1,17-17l32,32A12,12,0,0,1,216.49,184.49Zm-145-64a12,12,0,0,0,17-17L77,92H208a12,12,0,0,0,0-24H77L88.49,56.49a12,12,0,0,0-17-17l-32,32a12,12,0,0,0,0,17Z"/></svg></i><b>Система лояльности</b><span>Выгодная конвертация баллов Альфа-Банка в баллы Авито</span></div>
+      <div data-reveal style="--i:4"><em>5</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M100,100a12,12,0,0,1,12-12h32a12,12,0,0,1,0,24H112A12,12,0,0,1,100,100ZM236,68V196a20,20,0,0,1-20,20H40a20,20,0,0,1-20-20V68A20,20,0,0,1,40,48H76V40a28,28,0,0,1,28-28h48a28,28,0,0,1,28,28v8h36A20,20,0,0,1,236,68ZM100,48h56V40a4,4,0,0,0-4-4H104a4,4,0,0,0-4,4ZM44,72v35.23A180.06,180.06,0,0,0,128,128a180,180,0,0,0,84-20.78V72ZM212,192V133.94A204.27,204.27,0,0,1,128,152a204.21,204.21,0,0,1-84-18.06V192Z"/></svg></i><b>Нефинансовые сервисы Альфа-Банка</b><span>Полный доступ ко всем сервисам для бизнеса</span></div>
+      <div data-reveal style="--i:5"><em>6</em><i><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M246.17,57.9,198.09,29.65h0A11.9,11.9,0,0,0,192,28H160a12,12,0,0,0-12,12,20,20,0,0,1-40,0A12,12,0,0,0,96,28H64a11.9,11.9,0,0,0-6.07,1.66h0L9.83,57.9A20.18,20.18,0,0,0,2,84l17.9,36.8A19.62,19.62,0,0,0,37.67,132H52v76a20,20,0,0,0,20,20H184a20,20,0,0,0,20-20V132h14.32a19.64,19.64,0,0,0,17.75-11.17L254,84A20.18,20.18,0,0,0,246.17,57.9ZM40.37,108,25.16,76.73,52,61v47ZM180,204H76V52h9.67a44,44,0,0,0,84.68,0H180Zm35.62-96H204V61l26.83,15.76Z"/></svg></i><b>Мерч A²</b><span>При накоплении 30 000 баллов в xWallet</span></div>
+    </div>
+
+    <div style="margin-top:clamp(48px,6vw,80px)">
+      <span class="sec-ey" data-reveal><i class="dot d-b"></i>Клиентский путь</span>
+      <ol class="cjm" data-reveal>
+        <li><small>ШАГ 1</small><b>Открывает РКО</b><br>в Альфа-Банке из кабинета Авито</li>
+        <li><small>ШАГ 2</small><b>Получает сертификат A²</b><br>в личном кабинете</li>
+        <li><small>ШАГ 3</small><b>Активирует</b><br>в кабинете Авито</li>
+        <li class="on"><small>ШАГ 4</small><b>Пользуется сервисами</b><br>через бизнес-кошелёк Авито</li>
+      </ol>
+      <p class="hint-tap" data-reveal><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.26,90.4a108,108,0,0,1-177.63,114A108,108,0,0,1,195.41,43.63l20.1-20.11a12,12,0,0,1,17,17l-96,96a12,12,0,1,1-17-17l24-24a36,36,0,1,0,19.76,39.65,12,12,0,0,1,23.53,4.74,60,60,0,1,1-25.73-62L178.3,60.74a84,84,0,1,0,28.46,38,12,12,0,1,1,22.5-8.35Z"/></svg>KPI: открытые РКО и конверсия в первую активную сделку на Авито</p>
+    </div>
+
+    <div class="why">
+      <div data-reveal><b>Клиент видит «упакованный бизнес»</b><span>а не просто 10 000 на счету</span></div>
+      <div data-reveal style="--i:1"><b>Бесшовная интеграция оффера</b><span>Встраиваем нефинансовые решения в клиентский путь</span></div>
+      <div data-reveal style="--i:2" class="dk"><b>Цель в KPI</b><big class="num">10 тыс.</big><span>РКО в 2027 г.</span></div>
+      <div data-reveal style="--i:3" class="dk"><b>Бюджет на проект</b><big class="num">150 млн ₽</big><span>на реализацию проекта</span></div>
     </div>
   </div>
 </section>
@@ -1508,52 +1519,59 @@ function navCtrl(anchor,n,label,go){
 }
 
 /* ============ 1. B2B installment in Avito Реклама ============ */
+const AHD=`<div class="alfa-hd"><span class="a">А</span><b>Альфа-Банк</b><span>Онлайн-кредит для бизнеса</span></div>`;
+const MONTHS=['15 ноября','15 декабря','15 января','15 февраля'];
 const INS={
   fin:st=>({side:'Кошелёк',html:`<div class="vt"><h4>Финансы · Авито Реклама</h4><span class="tag ${st.paid?'ok':'rd'}">${st.paid?'продвижение активно':'баланс на нуле'}</span></div>
-    <div class="cobanner"><span class="a">А</span><span class="t"><b>Оплатите счёт в рассрочку</b><span>в Авито Реклама и Авито Про с Альфа-Банком</span></span><span class="c"><i class="circles"></i>Авито × Альфа</span><button class="go" data-act="go" data-v="term">Подробнее</button></div>
+    <div class="cobanner"><span class="a">А</span><span class="t"><b>Оплатите счёт в рассрочку</b><span>в Авито Реклама и Авито Про с Альфа-Банком</span></span><span class="c"><i class="circles"></i>Авито × Альфа</span><button class="go" data-act="go" data-v="auth">Подробнее</button></div>
     <div class="g3" style="margin-top:10px"><div class="w ${st.paid?'wal':'warn'}"><small>Баланс</small><b class="num">${rub(st.paid?st.sum:0)}</b><div class="hint">на всех аккаунтах</div></div><div class="w"><small>Бонусы</small><b class="num">0</b><div class="hint">можно использовать</div></div><div class="w"><small>Кэшбэк за месяц</small><b class="num">0 ₽</b><div class="hint">потратьте от 10 000 ₽</div></div></div>
-    <div class="order" style="margin-top:10px"><div class="li"><span>${st.paid?'Пополнение в рассрочку, Альфа-Банк':'Списание за продвижение, вчера'}</span><b class="num">${st.paid?'+'+rub(st.sum):'−4 200 ₽'}</b></div><div class="li"><span>Счёт на оплату № 2031</span><b style="color:var(--ink-3)">ждёт оплаты 2 дня</b></div></div>
-    <div class="row-end"><button class="cta soft" data-act="go" data-v="top">Пополнить</button><button class="btn-a ${st.paid?'':'pulse'}" data-act="go" data-v="term"><i>А</i>Купить в рассрочку</button></div>`}),
-  top:st=>({side:'Кошелёк',html:`<div class="vt"><h4>Как пополнить баланс</h4><button class="back" data-act="back">Назад</button></div>
-    <p style="color:var(--ink-2);font-size:13px;max-width:52ch">Введите сумму и сформируйте счёт. После оплаты деньги поступят на баланс в течение 1-3 рабочих дней. Или купите продвижение в рассрочку и запустите его сегодня.</p>
-    <div class="fld" style="margin-top:12px"><small>Сумма с НДС</small><div class="num">${rub(st.sum)}</div></div>
-    <div class="sum-chips">${[10000,30000,60000].map(v=>`<button class="${v===st.sum?'sel':''}" data-act="sum" data-v="${v}">${rub(v)}</button>`).join('')}</div>
-    ${st.inv?`<p class="note" style="color:#C51C33;font-weight:700">Счёт сформирован. Продвижение запустится после зачисления, через 1-3 дня.</p>`:''}
-    <div class="row-end"><button class="cta soft" data-act="inv">Сформировать счёт</button><button class="btn-a pulse" data-act="go" data-v="term"><i>А</i>Купить в рассрочку</button></div>`}),
-  term:st=>({side:'Кошелёк',html:`<div class="vt"><h4>Рассрочка Альфа-Банка для бизнеса</h4><button class="back" data-act="back">Назад</button></div>
-    <div class="g2"><div class="w"><small>Пополнение Авито Реклама</small><b class="num">${rub(st.sum)}</b><div class="hint">деньги поступят сразу</div></div><div class="w wal"><small>Платёж в месяц</small><b class="num">${rub(st.sum/st.term)}</b><div class="hint">${st.term} платежей, первый через месяц</div></div></div>
-    <div class="terms">${[3,6,12].map(t=>`<button class="${t===st.term?'sel':''}" data-act="term" data-v="${t}"><b>${t} мес.</b><span class="num">по ${rub(st.sum/t)}</span></button>`).join('')}</div>
-    <p class="note">Без учёта платы за рассрочку. Сроки 3, 6 и 12 месяцев и условия: концепция для обсуждения.</p>
-    <div class="row-end"><button class="btn-a" data-act="apply"><i>А</i>Оформить рассрочку</button></div>`}),
-  check:st=>({side:'Кошелёк',html:`<div class="vt"><h4>Решение банка</h4><span class="tag bl">обычно до минуты</span></div>
-    <ul class="steps3"><li class="${st.stage>=1?'ok':'now'}"><i>1</i>Проверяем компанию по ИНН из кабинета Авито</li><li class="${st.stage>=2?'ok':st.stage>=1?'now':''}"><i>2</i>Одобряем лимит рассрочки</li><li class="${st.stage>=3?'ok':st.stage>=2?'now':''}"><i>3</i>Перечисляем ${rub(st.sum)} на баланс Авито</li></ul>
-    <p class="note">Клиент не уходит с площадки и не заполняет анкету: данные компании уже есть в кабинете.</p>`}),
-  done:st=>({side:'Кошелёк',html:`<div class="big-ok"><span class="c">${I.check}</span><span><b>Баланс пополнен на ${rub(st.sum)}</b><span>Продвижение запущено сегодня, без ожидания бухгалтерии</span></span></div>
-    <div class="g3"><div class="w wal"><small>Баланс Авито</small><b class="num">${rub(st.sum)}</b></div><div class="w"><small>Платёж в месяц</small><b class="num">${rub(st.sum/st.term)}</b></div><div class="w"><small>Срок</small><b>${st.term} мес.</b><div class="hint">первый платёж через месяц</div></div></div>
-    <div class="row-end"><button class="cta soft" data-act="restart">В финансы</button></div>`})
+    <div class="order" style="margin-top:10px"><div class="li"><span>Счёт на оплату № 2031, продвижение на месяц</span><b class="num">${rub(st.sum)}</b></div><div class="li"><span>${st.paid?'Оплачен в рассрочку, Альфа-Банк':'Статус'}</span><b style="color:${st.paid?'#0B7A3B':'var(--ink-3)'}">${st.paid?'оплачено':'ждёт оплаты'}</b></div></div>
+    <div class="row-end">${st.paid?`<span class="tag ok" style="align-self:center">первый платёж ${MONTHS[0]}</span>`:`<button class="btn-a pulse" data-act="go" data-v="auth"><i>А</i>Купить в рассрочку</button>`}</div>`}),
+  auth:st=>({side:'',alfa:true,html:`${AHD}<div class="vt"><h4>${st.sms?'Подпишите согласие':'Вы клиент банка?'}</h4><button class="back" data-act="back">Назад</button></div>
+    ${st.sms?`<p style="color:var(--ink-2);font-size:13px;max-width:52ch">Согласие на обработку персональных данных подписывается кодом из СМС. Код отправили на +7 912 ••• 22 15.</p>
+      <div class="fld"><small>Код из СМС</small><div class="num">4 7 1 9</div></div>
+      ${st.busy?`<p class="note"><span class="spin" style="display:inline-flex;animation:spin .8s linear infinite;vertical-align:middle">${I.spin}</span> Банк проводит проверки и формирует предложение</p>`:''}
+      <div class="row-end"><button class="btn-a" data-act="sopd"><i>А</i>Подписать</button></div>`
+    :`<p style="color:var(--ink-2);font-size:13px;max-width:56ch">Войдите через Alfa ID, если у компании есть расчётный счёт в Альфа-Банке. Если нет, зарегистрируйтесь через Госуслуги.</p>
+      <div class="pms" style="max-width:480px"><button class="pm sel" data-act="alfaid"><span class="pi" style="background:var(--alfa);color:#fff;font-weight:800">А</span><span class="t"><b>Войти через Alfa ID</b><span>есть счёт: 4 шага, до 5 минут</span></span><span class="rad"></span></button>
+      <button class="pm" data-act="gos"><span class="pi">${I.lock}</span><span class="t"><b>Зарегистрироваться через Госуслуги</b><span>нет счёта: анкета, паспорт и подпись УКЭП, до 10 минут</span></span><span class="rad"></span></button></div>
+      ${st.gos?`<p class="note">Для клиентов без счёта путь длиннее: подтверждение анкеты, скан паспорта, подпись УКЭП и привязка карты для платежей. В прототипе показан путь клиента банка.</p>`:''}`}
+    `}),
+  offer:st=>({side:'',alfa:true,html:`${AHD}<div class="vt"><h4>Бизнес-рассрочка одобрена</h4><button class="back" data-act="back">Назад</button></div>
+    <div class="g2"><div class="w"><small>Оплата Авито Реклама</small><b class="num">${rub(st.sum)}</b><div class="hint">счёт № 2031, деньги уйдут в Авито сразу</div></div><div class="w wal"><small>Платёж раз в месяц</small><b class="num">${rub(st.sum/4)}</b><div class="hint">4 платежа, первый через месяц</div></div></div>
+    <div class="sched-d">${MONTHS.map((m,i)=>`<div><small>${i+1}-й платёж</small><b class="num">${rub(st.sum/4)}</b><span>${m}</span></div>`).join('')}</div>
+    <div class="set" style="margin-top:10px"><span><b>Счёт для погашения</b><span>ООО «Магистраль Авто», Альфа-Банк</span></span><span class="val num">•• 4417</span></div>
+    <p class="note">Разовая комиссия при оформлении, зависит от кредитного рейтинга. Досрочное погашение не предусмотрено.</p>
+    <div class="row-end"><button class="btn-a" data-act="go" data-v="sign"><i>А</i>Перейти к оформлению</button></div>`}),
+  sign:st=>({side:'',alfa:true,html:st.signed?`${AHD}<div class="big-ok"><span class="c">${I.check}</span><span><b>Договор подписан</b><span>Банк перечислил ${rub(st.sum)} в Авито, счёт № 2031 оплачен</span></span></div>
+    <div class="g3"><div class="w wal"><small>Оплачено в Авито</small><b class="num">${rub(st.sum)}</b></div><div class="w"><small>Платёж в месяц</small><b class="num">${rub(st.sum/4)}</b><div class="hint">4 платежа</div></div><div class="w"><small>Первый платёж</small><b>${MONTHS[0]}</b><div class="hint">со счёта •• 4417</div></div></div>
+    <div class="row-end"><button class="btn-a" data-act="toavito"><i>А</i>Вернуться в Авито</button></div>`
+  :`${AHD}<div class="vt"><h4>Подписание договора</h4><button class="back" data-act="back">Назад</button></div>
+    <div class="order">${['Кредитный договор, бизнес-рассрочка','График платежей: 4 платежа раз в месяц','Распоряжение о перечислении в Авито'].map(n=>`<div class="li"><span>${n}</span><b style="color:var(--ink-3)">PDF</b></div>`).join('')}</div>
+    <p class="note">Подпись по СМС. После подписания комиссия списывается с расчётного счёта, деньги сразу уходят продавцу.</p>
+    <div class="row-end">${st.busy?`<button class="btn-a" disabled><span class="spin" style="display:inline-flex;animation:spin .8s linear infinite">${I.spin}</span> Подписываем</button>`:`<button class="btn-a pulse" data-act="sign"><i>А</i>Подписать</button>`}</div>`})
 };
-const STEP={fin:0,top:1,term:2,check:3,done:4};
+const STEP={fin:0,auth:1,offer:2,sign:3};
 const inHost=$('#in-host'); let ist, ihist;
 let iNav=()=>{};
-const iRender=(d=1)=>{ mount(inHost,INS[ist.screen](ist),d); iNav(STEP[ist.screen]); $$('#in-cjm li').forEach(li=>{ const s=+li.dataset.s, c=STEP[ist.screen]; li.classList.toggle('on',s===c); li.classList.toggle('ok',s<c); }); };
+const iRender=(d=1)=>{ const scr=INS[ist.screen](ist); mount(inHost,scr,d); const app=inHost.closest('.app'); app.classList.toggle('alfa-site',!!scr.alfa); app.parentElement.querySelector('.url').textContent=scr.alfa?'alfabank.ru/sme/credit-online':'avito.ru/business/finance';
+  iNav(STEP[ist.screen]); $$('#in-cjm li').forEach(li=>{ const s=+li.dataset.s, c=STEP[ist.screen]; li.classList.toggle('on',s===c); li.classList.toggle('ok',s<c); }); };
 const iGo=s=>{ ihist.push(ist.screen); ist.screen=s; iRender(1); };
-const iReset=()=>{ ist={screen:'fin',sum:30000,term:6,stage:0,paid:false,inv:false,busy:false}; ihist=[]; iRender(0); };
+const iReset=()=>{ ist={screen:'fin',sum:30000,sms:false,gos:false,signed:false,paid:false,busy:false}; ihist=[]; iRender(0); };
 inHost.addEventListener('click',async e=>{
   const b=e.target.closest('[data-act]'); if(!b||ist.busy) return; const a=b.dataset.act, v=b.dataset.v;
   if(a==='go'){ iGo(v); return; }
-  if(a==='back'){ ist.screen=ihist.pop()||'fin'; iRender(-1); return; }
-  if(a==='sum'){ ist.sum=+v; ist.inv=false; iRender(0); return; }
-  if(a==='term'){ ist.term=+v; iRender(0); return; }
-  if(a==='inv'){ ist.inv=true; iRender(0); return; }
-  if(a==='restart'){ ist.screen='fin'; ihist=[]; iRender(-1); return; }
-  if(a==='apply'){ ist.busy=true; ist.stage=0; iGo('check');
-    for(const s of [1,2,3]){ await wait(750); ist.stage=s; iRender(0); }
-    await wait(500); ist.busy=false; ist.paid=true; ihist=['fin']; ist.screen='done'; iRender(1); }
+  if(a==='back'){ if(ist.screen==='auth'&&ist.sms){ ist.sms=false; iRender(-1); return; } ist.screen=ihist.pop()||'fin'; iRender(-1); return; }
+  if(a==='alfaid'){ ist.sms=true; ist.gos=false; iRender(1); return; }
+  if(a==='gos'){ ist.gos=true; iRender(0); return; }
+  if(a==='sopd'){ ist.busy=true; iRender(0); await wait(1300); ist.busy=false; iGo('offer'); return; }
+  if(a==='sign'){ ist.busy=true; iRender(0); await wait(1100); ist.busy=false; ist.signed=true; ist.paid=true; iRender(1); return; }
+  if(a==='toavito'){ ist.screen='fin'; ihist=[]; iRender(-1); return; }
 });
 $('#in-reset').addEventListener('click',iReset);
-const ISEQ=['fin','top','term','check','done'];
-const iJump=(i,d)=>{ if(ist.busy) return; ist.screen=ISEQ[i]; ihist=ISEQ.slice(0,i); ist.stage=i>=3?3:0; ist.paid=i===4; iRender(d); };
-iNav=navCtrl($('#inst .browser-fit'),5,'Экран',iJump);
+const ISEQ=['fin','auth','offer','sign'];
+const iJump=(i,d)=>{ if(ist.busy) return; ist.screen=ISEQ[i]; ihist=ISEQ.slice(0,i); ist.sms=i===1; ist.signed=false; ist.paid=false; iRender(d); };
+iNav=navCtrl($('#inst .browser-fit'),4,'Экран',iJump);
 $$('#in-cjm li').forEach(li=>{ li.style.cursor='pointer'; li.addEventListener('click',()=>{ const i=+li.dataset.s, c=STEP[ist.screen]; if(i!==c) iJump(i,i>c?1:-1); }); });
 iReset();
 
@@ -1604,13 +1622,13 @@ function makePhone(el,screens,start,seq,alias={}){
   return show;
 }
 const instBtn=(pulse)=>`<button class="inst ${pulse?'tapme':''}" data-go="sheet"><i>А</i>От 625 ₽ × 4 платежа в рассрочку с Альфа-Банком${IC.right}</button>`;
-const sched=`<div class="sched"><div class="now"><b class="num">625 ₽</b><span>сегодня</span></div><div><b class="num">625 ₽</b><span>через 2 нед.</span></div><div><b class="num">625 ₽</b><span>через 4 нед.</span></div><div><b class="num">625 ₽</b><span>через 6 нед.</span></div></div>`;
-const sheetHd=`<div class="gb"></div><div class="hd"><i>А</i><span><b>Рассрочка с Альфа-Банком</b><span>2 500 ₽ на 4 платежа</span></span></div>`;
+const sched=`<div class="sched">${['через 1 мес.','через 2 мес.','через 3 мес.','через 4 мес.'].map((t,k)=>`<div class="${k?'':'now'}"><b class="num">625 ₽</b><span>${t}</span></div>`).join('')}</div>`;
+const sheetHd=`<div class="gb"></div><div class="hd"><i>А</i><span><b>Рассрочка с Альфа-Банком</b><span>2 500 ₽ на 4 платежа раз в месяц</span></span></div>`;
 const productScreens={
   p0:`<img class="base" src="${IMG.product}" alt="">${instBtn(true)}`,
-  sheet:`<img class="base" src="${IMG.product}" alt="">${instBtn(false)}<div class="dim" data-go="p0"></div><div class="sheet">${sheetHd}${sched}<div class="rows"><div><span>Товар</span><span>Фарфоровые ёлочные игрушки</span></div><div><span>Списание</span><span>с Альфа-Карты •• 4567</span></div></div><button class="go" data-go="buying">Оформить за 625 ₽ сегодня</button><p class="fine">Условия для примера</p></div>`,
+  sheet:`<img class="base" src="${IMG.product}" alt="">${instBtn(false)}<div class="dim" data-go="p0"></div><div class="sheet">${sheetHd}${sched}<div class="rows"><div><span>Товар</span><span>Фарфоровые ёлочные игрушки</span></div><div><span>Первый платёж</span><span>через месяц после покупки</span></div></div><button class="go" data-go="buying">Оформить рассрочку</button><p class="fine">Условия для примера</p></div>`,
   buying:`<img class="base" src="${IMG.product}" alt="">${instBtn(false)}<div class="dim"></div><div class="sheet">${sheetHd}${sched}<button class="go" style="opacity:.8"><span class="spin" style="display:inline-flex;animation:spin .8s linear infinite;vertical-align:middle">${IC.spin}</span> Оформляем</button></div>`,
-  bought:`<img class="base" src="${IMG.product}" alt="">${instBtn(false)}<div class="dim"></div><div class="sheet"><div class="gb"></div><div class="okc">${IC.check}</div><h5>Рассрочка оформлена</h5><p>Первый платёж 625 ₽ списан с Альфа-Карты •• 4567. Следующий через 2 недели.</p><button class="go gr" data-go="p0">Готово</button></div>`
+  bought:`<img class="base" src="${IMG.product}" alt="">${instBtn(false)}<div class="dim"></div><div class="sheet"><div class="gb"></div><div class="okc">${IC.check}</div><h5>Рассрочка оформлена</h5><p>Продавец получил оплату сразу. Вы платите 625 ₽ раз в месяц, первый платёж через месяц.</p><button class="go gr" data-go="p0">Готово</button></div>`
 };
 const PSEQ=['p0','sheet','bought'], PAL={buying:'sheet'};
 makePhone($('#ph-item'),productScreens,'p0',PSEQ,PAL);
